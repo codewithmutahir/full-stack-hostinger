@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "description": "High-fidelity over-ear wireless headphones with noise cancellation.",
+    "price": 89.99,
+    "inStock": true,
+    "image": "https://images.unsplash.com/photo-1519125323398-675f0ddb6308"
+  },
+  {
+    "id": 2,
+    "name": "Smart Fitness Watch",
+    "description": "Track your workouts, heart rate, and sleep with this smart wearable.",
+    "price": 129.99,
+    "inStock": true,
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9"
+  },
+  {
+    "id": 3,
+    "name": "Bluetooth Speaker",
+    "description": "Portable speaker with waterproof design and deep bass.",
+    "price": 45.49,
+    "inStock": false,
+    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c"
+  },
+  {
+    "id": 4,
+    "name": "Electric Kettle",
+    "description": "1.7L electric kettle with auto shut-off and boil-dry protection.",
+    "price": 28.00,
+    "inStock": true,
+    "image": "https://images.unsplash.com/photo-1504674900247-0877df9cc836"
+  },
+  {
+    "id": 5,
+    "name": "Gaming Mouse",
+    "description": "Ergonomic gaming mouse with RGB lighting and 7 programmable buttons.",
+    "price": 32.99,
+    "inStock": true,
+    "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8"
+  }
+]

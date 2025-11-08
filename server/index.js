@@ -1,5 +1,6 @@
 import express from "express";
 import cors from "cors";
+import products from "./products.json" with { type: "json" };
 
 const app = express();
 
@@ -21,9 +22,22 @@ app.use(
   })
 );
 
-//API route
+// Root route
+app.get("/", (req, res) => {
+  res.json({ 
+    message: "Server is running!",
+    endpoints: ["/api/message", "/api/products"]
+  });
+});
+
+//API message route
 app.get("/api/message", (req, res) => {
   res.json({ message: "Hello from mutahir's server" });
+});
+
+//API products route
+app.get("/api/products", (req, res) => {
+  res.json({ products: products });
 });
 
 const PORT = process.env.PORT || 4000;
