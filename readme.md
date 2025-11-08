@@ -132,7 +132,7 @@ PRs welcome! For major changes, open an issue first to discuss what you’d like
 
 ## 📞 Contact
 
-Questions? [your.email@example.com](mailto:mutharsoomro13@gmail.com)
+Questions? [mutharsoomro13@gmail.com](mailto:mutharsoomro13@gmail.com)
 
 ---
 
