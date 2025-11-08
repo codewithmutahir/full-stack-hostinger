@@ -4,15 +4,17 @@ import cors from "cors";
 const app = express();
 
 app.use(express.json());
-app.use(
-  cors({
-    origin: [
+const allowedOrigins = process.env.CLIENT_URL 
+  ? process.env.CLIENT_URL.split(',').map(url => url.trim())
+  : [
       "http://localhost:5174",
       "http://localhost:5173",
       "http://localhost:3000",
-      // Add Production URL
-      // "https://your-production-url.com"
-    ],
+    ];
+
+app.use(
+  cors({
+    origin: allowedOrigins,
     credentials: true,
     methods: ["GET", "POST"],
     allowedHeaders: ["Content-Type", "Authorization"],
@@ -24,7 +26,7 @@ app.get("/api/message", (req, res) => {
   res.json({ message: "Hello from mutahir's server" });
 });
 
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server is running on port ${PORT}`);
