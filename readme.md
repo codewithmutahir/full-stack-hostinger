@@ -119,7 +119,7 @@ docker-compose up --build
 
 ## ✨ Credit & License
 
-- Created by Mutahir Hussain, 2024
+- Created by Mutahir Hussain, 2025
 - MIT License
 
 ---
