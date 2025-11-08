@@ -1,6 +1,14 @@
 # 🚀 Full Stack React + Express Dockerized Application
 
-Welcome! This is a professional full stack application boilerplate built with **React** (client) and **Express** (server), all containerized with **Docker Compose** for easy local development and production deployment.
+Welcome! This is a professional full stack application built with **React** (client) and **Express** (server), containerized with **Docker Compose** for local development and deployed on **Railway.app** for production.
+
+---
+
+## 🌐 Live Demo
+
+- **Frontend (Client):** [View Live Application](https://your-client-url.up.railway.app) *(Update with your client Railway URL)*
+- **Backend (API):** [https://endearing-comfort-production-a291.up.railway.app](https://endearing-comfort-production-a291.up.railway.app)
+- **API Endpoint:** [https://endearing-comfort-production-a291.up.railway.app/api/message](https://endearing-comfort-production-a291.up.railway.app/api/message)
 
 ---
 
@@ -21,8 +29,10 @@ Welcome! This is a professional full stack application boilerplate built with **
 - ⚡ Modern **React** SPA frontend (Vite, production build)
 - 🔥 Robust **Express** REST API backend
 - 📦 Easy multi-container orchestration with Docker Compose
+- 🚂 Deployed on **Railway.app** for production
 - 🔒 CORS & security best practices
-- 🏗️ Ready for local development & deployment
+- 🏗️ Ready for local development & production deployment
+- 🔄 Automatic environment detection (localhost in dev, Railway URL in production)
 
 ---
 
@@ -35,7 +45,7 @@ Welcome! This is a professional full stack application boilerplate built with **
 ### 2. Clone This Repository
 
 ```bash
-git clone https://github.com/your-username/your-repo.git
+git clone https://github.com/codewithmutahir/full-stack-hostinger.git
 cd your-repo
 ```
 
@@ -75,8 +85,21 @@ docker-compose up --build
 
 ## 🛠️ Environment Variables
 
+### Local Development
 - Client and server can be configured via `.env` files (see `.env.example` templates in respective folders)
 - Add your own API keys or secrets as needed
+
+### Production (Railway.app)
+- **Server Environment Variables:**
+  - `CLIENT_URL` - Your client's Railway URL (e.g., `https://your-client.up.railway.app`)
+  - `PORT` - Automatically set by Railway
+
+- **Client Environment Variables:**
+  - The client automatically detects the environment and uses the appropriate API URL
+  - In production, it uses the Railway server URL
+  - In development, it uses `http://localhost:4000`
+
+For detailed Railway deployment instructions, see [RAILWAY_DEPLOYMENT.md](./RAILWAY_DEPLOYMENT.md)
 
 ---
 
@@ -109,11 +132,46 @@ npm run start
 
 ## 📦 Production Build
 
+### Local Production Build
+
 Build and run **everything** optimized in Dockerized containers with:
 
 ```bash
 docker-compose up --build
 ```
+
+### Railway Deployment
+
+This application is deployed on **Railway.app**:
+
+- **Server:** Deployed as a separate service with Root Directory set to `server`
+- **Client:** Deployed as a separate service with Root Directory set to `client`
+- Both services are automatically deployed from GitHub on every push
+- Environment variables are configured in Railway's dashboard
+
+**Deployment Status:** ✅ Both services are live and running
+
+For step-by-step Railway deployment instructions, see [RAILWAY_DEPLOYMENT.md](./RAILWAY_DEPLOYMENT.md)
+
+---
+
+## 🚂 Deployment
+
+This application is deployed on **Railway.app**:
+
+- ✅ **Server:** Live and running
+- ✅ **Client:** Live and running
+- 🔄 **Auto-deploy:** Enabled (deploys on every git push)
+
+### Deployment URLs
+- **Server API:** `https://endearing-comfort-production-a291.up.railway.app`
+- **Client App:** *(Update with your client Railway URL)*
+
+### How It Works
+- The client automatically detects if it's running in production or development
+- In production (Railway), it connects to the Railway server URL
+- In development (localhost), it connects to `http://localhost:4000`
+- CORS is configured to allow requests from the client's Railway URL
 
 ---
 
