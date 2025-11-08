@@ -1,4 +1,0 @@
-// Example config file - copy this to config.js for local development
-// This file is auto-generated during build in production
-export const API_URL = 'http://localhost:4000';
-
