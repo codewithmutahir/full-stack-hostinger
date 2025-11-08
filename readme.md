@@ -6,7 +6,7 @@ Welcome! This is a professional full stack application built with **React** (cli
 
 ## 🌐 Live Demo
 
-- **Frontend (Client):** [View Live Application](https://glistening-inspiration-production-5d0d.up.railway.app) *(Update with your client Railway URL)*
+- **Frontend (Client):** [View Live Application](https://glistening-inspiration-production-5d0d.up.railway.app)
 - **Backend (API):** [https://endearing-comfort-production-a291.up.railway.app](https://endearing-comfort-production-a291.up.railway.app)
 - **API Endpoint:** [https://endearing-comfort-production-a291.up.railway.app/api/message](https://endearing-comfort-production-a291.up.railway.app/api/message)
 
