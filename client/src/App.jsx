@@ -5,9 +5,11 @@ function App() {
   const [message, setMessage] = useState('')
 
   useEffect(() => {
-    // Vite environment variables are embedded at build time
-    const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:4000';
-    console.log('API URL from env:', import.meta.env.VITE_API_URL);
+    // Use Railway server URL in production, localhost in development
+    const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
+    const apiUrl = isProduction 
+      ? 'https://endearing-comfort-production-a291.up.railway.app'
+      : 'http://localhost:4000';
     console.log('Using API URL:', apiUrl);
     fetch(`${apiUrl}/api/message`)
     .then(res => res.json())
