@@ -5,8 +5,10 @@ function App() {
   const [message, setMessage] = useState('')
 
   useEffect(() => {
+    // Vite environment variables are embedded at build time
     const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:4000';
-    console.log('API URL:', apiUrl); // Debug log
+    console.log('API URL from env:', import.meta.env.VITE_API_URL);
+    console.log('Using API URL:', apiUrl);
     fetch(`${apiUrl}/api/message`)
     .then(res => res.json())
     .then((data) => setMessage(data.message))
