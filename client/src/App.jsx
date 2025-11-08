@@ -1,17 +1,13 @@
 import { useState, useEffect } from 'react'
+import { API_URL } from './config.js'
 import './App.css'
 
 function App() {
   const [message, setMessage] = useState('')
 
   useEffect(() => {
-    // Use Railway server URL in production, localhost in development
-    const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1';
-    const apiUrl = isProduction 
-      ? 'https://endearing-comfort-production-a291.up.railway.app'
-      : 'http://localhost:4000';
-    console.log('Using API URL:', apiUrl);
-    fetch(`${apiUrl}/api/message`)
+    console.log('Using API URL:', API_URL);
+    fetch(`${API_URL}/api/message`)
     .then(res => res.json())
     .then((data) => setMessage(data.message))
     .catch(err => {
