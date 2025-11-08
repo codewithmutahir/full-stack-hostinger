@@ -6,7 +6,7 @@ Welcome! This is a professional full stack application built with **React** (cli
 
 ## 🌐 Live Demo
 
-- **Frontend (Client):** [View Live Application](https://your-client-url.up.railway.app) *(Update with your client Railway URL)*
+- **Frontend (Client):** [View Live Application](https://glistening-inspiration-production-5d0d.up.railway.app) *(Update with your client Railway URL)*
 - **Backend (API):** [https://endearing-comfort-production-a291.up.railway.app](https://endearing-comfort-production-a291.up.railway.app)
 - **API Endpoint:** [https://endearing-comfort-production-a291.up.railway.app/api/message](https://endearing-comfort-production-a291.up.railway.app/api/message)
 
@@ -165,7 +165,7 @@ This application is deployed on **Railway.app**:
 
 ### Deployment URLs
 - **Server API:** `https://endearing-comfort-production-a291.up.railway.app`
-- **Client App:** *(Update with your client Railway URL)*
+- **Client App:** `https://glistening-inspiration-production-5d0d.up.railway.app/`
 
 ### How It Works
 - The client automatically detects if it's running in production or development
