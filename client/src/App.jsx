@@ -6,6 +6,7 @@ function App() {
 
   useEffect(() => {
     const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:4000';
+    console.log('API URL:', apiUrl); // Debug log
     fetch(`${apiUrl}/api/message`)
     .then(res => res.json())
     .then((data) => setMessage(data.message))
